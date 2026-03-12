@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import VideoControls from './VideoControls.svelte';
+  import { API_BASE_URL } from '$lib/config';
 
   export let videoInfo = {};
 
@@ -33,7 +34,7 @@
   function initPlayer() {
     if (!videoElement || !window.Hls) return;
 
-    const videoUrl = `http://localhost:3000${videoInfo.playlist_url}`;
+    const videoUrl = `${API_BASE_URL}${videoInfo.playlist_url}`;
 
     if (window.Hls.isSupported()) {
       hls = new window.Hls();
