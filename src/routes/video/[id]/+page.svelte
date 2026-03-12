@@ -96,7 +96,7 @@
 </script>
 
 <svelte:head>
-  <title>{videoInfo?.title || 'Video'} - VideoStream</title>
+  <title>{videoInfo?.title || 'Video'} - VideoBeet</title>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </svelte:head>
 
